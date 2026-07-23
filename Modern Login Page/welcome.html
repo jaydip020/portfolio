@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Poppins,sans-serif;
+        }
+
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:linear-gradient(135deg,#00c6ff,#0072ff);
+        }
+
+        .box{
+            background:white;
+            padding:50px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,.3);
+        }
+
+        h1{
+            color:#0072ff;
+            margin-bottom:20px;
+        }
+
+        p{
+            font-size:20px;
+            margin-bottom:30px;
+        }
+
+        a{
+            text-decoration:none;
+            background:#0072ff;
+            color:white;
+            padding:12px 30px;
+            border-radius:10px;
+        } 
+     </style>..
+
+</head>
+<script>
+    const user = localStorage.getItem("username");
+
+    document.getElementById("welcomeUser").innerHTML =
+        "Welcome, <strong>" + user + "</strong>! 🎉";
+</script>
+
+<body>
+
+<div class="box">
+
+    <h1>🎉 Login Successful</h1>
+
+    <p id="welcomeUser"></p>
+
+    <a href="index.html">Logout</a>
+
+</div>
+
+</body>
+</html>

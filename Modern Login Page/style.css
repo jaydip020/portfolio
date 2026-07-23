@@ -1,0 +1,310 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Body */
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    overflow:hidden;
+}
+
+/* Container */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Login Box */
+
+.login-box{
+    width:350px;
+    background:rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+/* Heading */
+
+.login-box h2{
+    color:white;
+    margin-bottom:30px;
+}
+
+/* Input */
+
+.login-box input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+/* Button */
+
+.login-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+
+.login-box button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+/* Password Box */
+
+.password-box{
+    position:relative;
+}
+
+.password-box input{
+    width:100%;
+}
+
+.password-box span{
+    position:absolute;
+    right:15px;
+    top:35%;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* Forgot Password */
+
+.forgot{
+    display:block;
+    text-align:right;
+    color:white;
+    text-decoration:none;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+/* Register */
+
+.register{
+    color:white;
+    margin-top:20px;
+}
+
+.register a{
+    color:yellow;
+    text-decoration:none;
+    font-weight:bold;
+}
+/* Input Box */
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px 45px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#555;
+}
+
+#togglePassword{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+
+/* Login Box Hover */
+
+
+.login-box:hover{
+    transform:scale(1.03);
+    transition:.4s;
+}
+/*.login-box{
+    animation:popup .8s ease;
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}*/
+
+/* Button Hover */
+
+.login-box button:hover{
+    transform:translateY(-3px);
+}
+/* Floating Circles */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:float 6s ease-in-out infinite;
+}
+
+.circle1{
+    width:200px;
+    height:200px;
+    top:50px;
+    left:100px;
+}
+
+.circle2{
+    width:150px;
+    height:150px;
+    bottom:60px;
+    right:100px;
+    animation-delay:2s;
+}
+
+/* Animation */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/* Remember Me */
+
+.remember{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.remember label{
+    color:white;
+    font-size:15px;
+}
+
+.forgot{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+/* ==========================
+   Responsive Design
+========================== */
+
+@media (max-width:768px){
+
+    .login-box{
+        width:90%;
+        padding:30px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .circle1{
+        width:120px;
+        height:120px;
+        top:20px;
+        left:20px;
+    }
+
+    .circle2{
+        width:100px;
+        height:100px;
+        bottom:20px;
+        right:20px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .login-box{
+        width:95%;
+        padding:20px;
+    }
+
+    .login-box h2{
+        font-size:24px;
+    }
+
+    .login-box input{
+        font-size:15px;
+        padding:12px 40px;
+    }
+
+    .login-box button{
+        padding:12px;
+        font-size:16px;
+    }
+
+}
+
+.login-box{
+    transition:0.4s;
+}
+
+.login-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+.input-box input:focus{
+    border:2px solid #00c6ff;
+    box-shadow:0 0 10px rgba(0,198,255,0.5);
+}
