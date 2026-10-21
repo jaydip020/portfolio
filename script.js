@@ -106,32 +106,6 @@ window.addEventListener("scroll", () => {
     });
 
 });
-
-
-// =========================
-// Scroll To Top Button
-// =========================
-
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 250) {
-        scrollTopBtn.style.display = "block";
-    } else {
-        scrollTopBtn.style.display = "none";
-    }
-
-});
-
-scrollTopBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
 // =========================
 // Scroll Progress Bar
 // =========================
@@ -154,4 +128,34 @@ window.addEventListener("scroll", () => {
 
     progressBar.style.width = progress + "%";
 
+});
+
+/* Back to Top Button */
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "flex";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+// Professional Preloader
+
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    preloader.classList.add("hide");
+
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 500);
 });
