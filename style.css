@@ -544,3 +544,16 @@ footer p{
 #scrollTopBtn:hover{
     transform:translateY(-5px);
 }
+/* Scroll Progress Bar */
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #00d9f5;
+    z-index: 99999;
+    transition: width 0.05s linear;
+    box-shadow: 0 0 10px #00d9f5;
+}

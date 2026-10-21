@@ -132,3 +132,26 @@ scrollTopBtn.addEventListener("click", () => {
     });
 
 });
+// =========================
+// Scroll Progress Bar
+// =========================
+
+const progressBar = document.getElementById("scroll-progress");
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+
+    const scrollHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    let progress = 0;
+
+    if (scrollHeight > 0) {
+        progress = (scrollTop / scrollHeight) * 100;
+    }
+
+    progressBar.style.width = progress + "%";
+
+});
